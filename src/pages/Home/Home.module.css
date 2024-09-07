@@ -1,7 +1,7 @@
 .main{
     display: block;
     padding: 16px 16px;
-    height: 100vh;
+    height: auto;
     width: 1222px;
     border: 1px solid #9B9B9B;
     box-shadow: 3px 4px 4px 0px #00000040;
@@ -9,12 +9,41 @@
     background-color: #3B3B3B;
 }
 
-h1{
-    font-family: Ubuntu;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 36.77px;
-    text-align: left;
-    color: #fff;
-    margin-bottom: 10px;
+.section
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    .main{
+        width: 95%;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main{
+        width: 95%;
+    }
+
+    .section{
+        flex-direction: column;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .main{
+        width: 93%;
+    }
+
+    .section{
+        flex-direction: column;
+    }
 }

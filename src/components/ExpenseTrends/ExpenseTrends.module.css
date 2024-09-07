@@ -1,0 +1,107 @@
+.expenseTrends
+{
+    width: 28%;
+}
+h1{
+    font-family: Ubuntu;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 32.17px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.card
+{
+    background: #fff;
+    width: 90%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #9B9B9B;
+    border-radius: 12px;
+    padding: 16px;
+    height: 345px;
+}
+.trendConatiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.trendItem{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.trendItem > p{
+    min-width: 100px;
+    text-align : right;
+    margin-right: 5px;
+}
+.expenseProgress{
+    height: 20px;
+    width: 100%;
+    background-color: #8784D2;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 0px 20px 20px 0px;
+    text-align : left;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .expenseTrends
+    {
+        width: 60%;
+    }
+    .card{
+        width: 94%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .expenseTrends
+    {
+        width: 60%;
+    }
+    .card{
+        width: 94%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .expenseTrends
+    {
+        width: 60%;
+    }
+
+    .card{
+        width: 94%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .expenseTrends
+    {
+        width: 90%;
+    }
+    .card{
+        width: 94%;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .expenseTrends
+    {
+        width: 100%;
+    }
+
+    .card{
+        width: 94%;
+    }
+}

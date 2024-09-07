@@ -1,6 +1,8 @@
 import React from 'react'
 import Modal from 'react-modal';
-import styles from './Model.module.css';
+import AddExpenseForm from '../AddExpenseForm/AddExpenseForm';
+import AddIncomeForm from '../AddIncomeForm/AddIncomeForm';
+
 
 const customStyles = {
     content: {
@@ -20,65 +22,28 @@ const customStyles = {
 
 
 
-const Model = ({modalIsOpen,  closeModal, modalName = 'addExpense'}) => {
+const Model = ({modalIsOpen, closeModal, expenses, balance, setBalance, setExpenses, modalName = 'addExpense'}) => {
     
   return (
     <>
-        <Modal
+      <Modal
         isOpen={modalIsOpen}
         // onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
       >
-        {modalName === 'addExpense' ? (
-            <>            
-                <h2>Add Expenses</h2>
-                <form className={styles.form}>
-                    <input type='text' placeholder='Title' />
-                    <input type='number' placeholder='Price' />
-                    <select>
-                        <option value='Food'>Food</option>
-                        <option value='Travel'>Travel</option>
-                        <option value='Entertainment'>Entertainment</option>
-                    </select>
-                    <input type='date' placeholder='dd/mm/yyyy' />
-                    <button type='submit'>Add Expense</button>
-                    <button type='button' onClick={closeModal}>Cancel</button>
-                </form>
-            </>
-        ) : (modalName === 'editExpense' ? (
-            <>
-                <h2>Edit Expenses</h2>
-                <form className={styles.form}>
-                    <input type='text' placeholder='Title' />
-                    <input type='number' placeholder='Price' />
-                    <select>
-                        <option value='Food'>Food</option>
-                        <option value='Travel'>Travel</option>
-                        <option value='Entertainment'>Entertainment</option>
-                    </select>
-                    <input type='date' placeholder='dd/mm/yyyy' />
-                    <button type='submit'>Add Expense</button>
-                    <button type='button' onClick={closeModal}>Cancel</button>
-                </form>
-            </>
-            ) : (
-            <>
-                <h2>Add Balance</h2>
-                <form className={styles.form}>
-                    <input type='number' placeholder='Income Amount' style={{ width: '193px' }} />
-                    <button type='submit' style={{ width: '145px' }}>Add Balance</button>
-                    <button type='button' onClick={closeModal}>Cancel</button>
-                </form>
-            </>
-            )
-        )}
-
-        
+      {modalName === 'addExpense' ? (
+        <>
+          <AddExpenseForm closeModal={closeModal} expenses={expenses} setExpenses={setExpenses} balance={balance} setBalance={setBalance} />                
+        </>
+      ) : (
+        <>
+          <AddIncomeForm closeModal={closeModal} balance={balance} setBalance={setBalance} />
+        </>
+      )}        
       </Modal>
-    </>
-    
+    </>    
   )
 }
 

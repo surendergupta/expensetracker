@@ -22,8 +22,63 @@
 }
 
 .chartContainer{
-    width: 239.26px;
-    height: 677px;
-    gap: 0px;
-    rotate: -0 deg;
+    width: 280px;
+    height: 267px;
+}
+
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    .section
+    {
+        width: 100%;
+    }
+    .cardContainer
+    {
+        width: 70%;
+        justify-content: space-around;
+    }
+
+    .chartContainer{
+        width: 30%;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .section
+    {
+        width: 100%;
+    }
+    .cardContainer
+    {
+        width: 70%;
+        justify-content: space-around;
+    }
+
+    .chartContainer{
+        width: 30%;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .section
+    {
+        width: 90%;
+        display: block;
+        height: auto;
+        padding: 15px;
+    }
+    .cardContainer
+    {
+        width: 100%;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .chartContainer{
+        width: 100%;
+    }
 }
