@@ -40,3 +40,23 @@
     text-align: center;
 
 }
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .form button[type="submit"]{
+        width: 58%;
+    }
+    .form button[type="button"]{
+        width: 30%;
+    }
+}

@@ -20,6 +20,7 @@ h1{
     border-radius: 12px;
     padding: 16px;
     height: 345px;
+    position: relative;
 }
 
 .listBoxWrapper
@@ -85,7 +86,6 @@ h1{
     font-size: 16px;
     font-weight: 700;
     line-height: 21.79px;
-    text-align: left;
     text-align: right;
     color: #F4BB4A;
     display: flex;
@@ -94,6 +94,7 @@ h1{
     gap: 0px;
 
 }
+
 .itemAction{
     display: flex;
     justify-content: space-between;
@@ -121,8 +122,59 @@ h1{
 .itemAction > button:first-child{
     background: #FF3E3E;
 }
+.modalContent {
+    width: 90%;
+    max-width: 538px;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    background: #EFEFEFD9;
+    border-radius: 15px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
 
+/* pagination */
+.paginationWrapper
+{
+    /* width: 137px;
+    height: 37px; */
+    gap: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.paginationLeft, .paginationRight{
+    width: 37px;
+    height: 37px;
+    border-radius: 15px;
+    background: linear-gradient(0deg, #F1F1F1, #F1F1F1);
+    box-shadow: 0px 4px 4px 0px #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+.paginationCenter{
+    width: 37px;
+    height: 37px;
+    border-radius: 5px;
+    background: #43967B;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+/* .paginationRight{
 
+} */
 /* Desktop styles */
 @media (min-width: 1025px) {
     .expenseList
@@ -152,6 +204,36 @@ h1{
         width: 100%;
     }
     .card{
-        width: 94%;
+        width: 90%;
+    }
+    .modalContent {
+        width: 82%;
+        padding: 15px;
+    }
+
+    .expenseIcon
+    {
+        width: 50px;
+        height: 38px;
+    }
+    .itemDetails{
+        gap: 5px;
+        padding: 0 6px;
+    }
+    .itemContent
+    {
+        gap: 0px;
+    }
+    .itemName, .itemDate, .itemPrice {
+        font-size: 14px;
+        line-height: 18.79px;
+    }
+    .itemAction{
+        gap: 5px;
+    }
+
+    .itemAction > button{
+        width: 30px;
+        height: 30px;
     }
 }

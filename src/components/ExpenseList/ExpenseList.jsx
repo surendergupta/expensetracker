@@ -5,6 +5,8 @@ import { PiPizzaLight } from "react-icons/pi";
 import { PiGift } from "react-icons/pi";
 import { PiCurrencyInr } from "react-icons/pi";
 import { BsPencil } from "react-icons/bs";
+import { BiLeftArrowAlt } from "react-icons/bi";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 import EditExpenseFrom from '../EditExpenseForm/EditExpenseForm';
 import DeleteExpenseModel from '../DeleteExpenseModel/DeleteExpenseModel';
@@ -12,19 +14,7 @@ import DeleteExpenseModel from '../DeleteExpenseModel/DeleteExpenseModel';
 import Modal from 'react-modal';
 import styles from './ExpenseList.module.css'
 
-const customStyles = {
-    content: {
-      width: '538px',
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      background: '#EFEFEFD9',
-      borderRadius: '15px',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-};
+
 Modal.setAppElement('#root');
 
 const ExpenseList = ({ expenses, setExpenses, balance, setBalance }) => {
@@ -92,13 +82,18 @@ const ExpenseList = ({ expenses, setExpenses, balance, setBalance }) => {
                         </button>                        
                     </div>
                 </li>
-            ))}            
+            ))}                        
         </ul>
+        <div className={styles.paginationWrapper}>
+            <div className={styles.paginationLeft}><BiLeftArrowAlt /></div>
+            <div className={styles.paginationCenter}>1</div>
+            <div className={styles.paginationRight}><BiRightArrowAlt /></div>
+        </div>
         {selectedExpense && (
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                style={customStyles}
+                className={styles.modalContent}
                 contentLabel={`Update Modal ${selectedExpense.id}`}
                 ariaHideApp={false}
             >
@@ -118,7 +113,7 @@ const ExpenseList = ({ expenses, setExpenses, balance, setBalance }) => {
                 <Modal
                 isOpen={deleteModalIsOpen}
                 onRequestClose={closeModal}
-                style={customStyles}
+                className={styles.modalContent}
                 contentLabel={`Delete Modal ${selectedExpenseDelete.id}`}
                 ariaHideApp={false}
             >

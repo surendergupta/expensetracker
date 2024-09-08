@@ -2,24 +2,8 @@ import React from 'react'
 import Modal from 'react-modal';
 import AddExpenseForm from '../AddExpenseForm/AddExpenseForm';
 import AddIncomeForm from '../AddIncomeForm/AddIncomeForm';
-
-
-const customStyles = {
-    content: {
-      width: '538px',
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      background: '#EFEFEFD9',
-      borderRadius: '15px',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
-  Modal.setAppElement('#root');
-
-
+import styles from './Model.module.css';
+Modal.setAppElement('#root');
 
 
 const Model = ({modalIsOpen, closeModal, expenses, balance, setBalance, setExpenses, modalName = 'addExpense'}) => {
@@ -30,7 +14,7 @@ const Model = ({modalIsOpen, closeModal, expenses, balance, setBalance, setExpen
         isOpen={modalIsOpen}
         // onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
-        style={customStyles}
+        className={styles.modalContent}
         contentLabel="Example Modal"
       >
       {modalName === 'addExpense' ? (

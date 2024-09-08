@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
 import { useSnackbar } from 'notistack';
+import { saveToLocalStorage } from '../../utils/localStorage';
 
 import styles from './AddIncomeForm.module.css'
-import { saveToLocalStorage } from '../../utils/localStorage';
 
 const AddIncomeForm = ({ closeModal, balance, setBalance}) => {
     const [income, setIncome] = useState(0);
@@ -31,8 +30,7 @@ const AddIncomeForm = ({ closeModal, balance, setBalance}) => {
                 type='number' 
                 placeholder='Add Income Amount' 
                 value={income} 
-                onChange={(e) => setIncome(e.target.value)}
-                style={{ width: '193px' }} 
+                onChange={(e) => setIncome(e.target.value)}                
             />
             <button type='submit'>Add Balance</button>
             <button type='button' onClick={closeModal}>Cancel</button>
