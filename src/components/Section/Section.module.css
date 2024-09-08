@@ -1,7 +1,6 @@
 .section{
     box-shadow: 0px 4px 4px 0px #00000040;
     background: #626262;
-    width: 1211px;
     height: 269px;
     gap: 0px;
     border-radius: 10px;
@@ -29,7 +28,7 @@
 
 /* Desktop styles */
 @media (min-width: 1025px) {
-    .section
+     .section
     {
         width: 100%;
     }
@@ -38,7 +37,6 @@
         width: 70%;
         justify-content: space-around;
     }
-
     .chartContainer{
         width: 30%;
     }
@@ -48,12 +46,14 @@
 @media (min-width: 601px) and (max-width: 1024px) {
     .section
     {
-        width: 100%;
+        width: 96%;
+        padding: 0 10px;
     }
     .cardContainer
     {
         width: 70%;
         justify-content: space-around;
+        gap: 5px;
     }
 
     .chartContainer{

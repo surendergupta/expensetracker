@@ -1,6 +1,6 @@
 .expenseList
 {
-    width: 68%;
+    flex: 1 1 68%;
 }
 h1{
     font-family: Ubuntu;
@@ -194,6 +194,32 @@ h1{
     }
     .card{
         width: 94%;
+    }
+
+    .expenseIcon
+    {
+        width: 38px;
+        height: 38px;
+    }
+    .itemDetails{
+        gap: 5px;
+        padding: 0 10px;
+    }
+    .itemContent
+    {
+        gap: 0px;
+    }
+    .itemName, .itemDate, .itemPrice {
+        font-size: 14px;
+        line-height: 18.79px;
+    }
+    .itemAction{
+        gap: 5px;
+    }
+
+    .itemAction > button{
+        width: 38px;
+        height: 38px;
     }
 }
 
