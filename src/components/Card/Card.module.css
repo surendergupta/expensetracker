@@ -61,9 +61,7 @@
 
 /* Desktop styles */
 @media (min-width: 1025px) {
-    .card{
-        width: 300px;
-    }
+    
 }
 
 /* Tablet styles */

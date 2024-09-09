@@ -8,7 +8,7 @@
 }
 .form input{
     box-shadow: 0px 4px 4px 0px #00000040;
-    width: 230px;
+    width: 193px;
     height: 51px;
     border-radius: 15px;
     background: linear-gradient(0deg, #FBFBFB, #FBFBFB);
@@ -24,7 +24,7 @@
 }
 
 .form button[type="submit"]{
-    width: 193px;
+    width: 145px;
     height: 51px;
     border-radius: 15px;
     background: linear-gradient(0deg, #F4BB4A, #F4BB4A);
