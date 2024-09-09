@@ -6,7 +6,7 @@ import ExpenseSummary from '../ExpenseSummary/ExpenseSummary';
 const Section = ({title, expenses, balance, setBalance, setExpenses}) => {
   return (
     <>
-    <h1>{title}</h1>
+    <h1 className={styles.heading}>{title}</h1>
     <section className={styles.section}>
         <div className={styles.cardContainer}>
             <Card 

@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import { BsCurrencyRupee } from "react-icons/bs";
-
-
 import styles from './Card.module.css';
 import Model from '../Model/Model';
-
-
 const Card = ({ label, expenses, balance, setBalance, setExpenses, btnLablel, mybtnClass}) => {
     const [modalIsOpen, setIsOpen] = useState(false);
     function openModal() {

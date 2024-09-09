@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar, YAxis, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, YAxis, ResponsiveContainer, XAxis } from 'recharts';
 
 import styles from './ExpenseTrends.module.css';
 const ExpenseTrends = ({ expenses }) => {
@@ -12,7 +12,6 @@ const ExpenseTrends = ({ expenses }) => {
         }
         return acc
     }, {});
-
     const dataArr = Object.entries(data).map(([key, value]) => ({ name: key, amount: value }));
     const sortedData = dataArr.sort((a, b) => b.amount - a.amount);
     const topExpenses = sortedData.slice(0, 5);
@@ -22,10 +21,15 @@ const ExpenseTrends = ({ expenses }) => {
         <div className={styles.card}>
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart data={topExpenses} layout='vertical'>
+                    <XAxis 
+                        type="number" 
+                        hide 
+                    />
                     <YAxis 
                         type="category" 
                         dataKey="name" 
                         stroke='#000' 
+                        domain={[0, 100]}                        
                         tickLine={false} 
                         tick={{
                             fontSize: '12px', 

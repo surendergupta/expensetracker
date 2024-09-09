@@ -12,9 +12,7 @@ import EditExpenseFrom from '../EditExpenseForm/EditExpenseForm';
 import DeleteExpenseModel from '../DeleteExpenseModel/DeleteExpenseModel';
 
 import Modal from 'react-modal';
-import styles from './ExpenseList.module.css'
-
-
+import styles from './ExpenseList.module.css';
 Modal.setAppElement('#root');
 
 const ExpenseList = ({ expenses, setExpenses, balance, setBalance }) => {
@@ -22,8 +20,6 @@ const ExpenseList = ({ expenses, setExpenses, balance, setBalance }) => {
     const [deleteModalIsOpen, setDeleteModelIsOpen] = useState(false);
     const [selectedExpense, setSelectedExpense] = useState(null);
     const [selectedExpenseDelete, setSelectedExpenseDelete] = useState(null);
-
-    
     const openModal = (expense) => {
         setSelectedExpense(expense);
         setIsOpen(true);
@@ -43,7 +39,6 @@ const ExpenseList = ({ expenses, setExpenses, balance, setBalance }) => {
         setSelectedExpenseDelete(null);
         setDeleteModelIsOpen(false);
     };
-    console.log(expenses);
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         const option = {

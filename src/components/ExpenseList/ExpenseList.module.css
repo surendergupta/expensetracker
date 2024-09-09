@@ -134,6 +134,7 @@ h1{
     margin-right: -50%;
     transform: translate(-50%, -50%);
     position: absolute;
+    padding: 15px;
 }
 
 /* pagination */
@@ -160,6 +161,7 @@ h1{
     align-items: center;
     justify-content: center;
     color: #000;
+    cursor: pointer;
 }
 .paginationCenter{
     width: 37px;
